@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let numbers = [];
+    let primes = [];
+    let a = 1;
+
+    for (let i = 1; i <= 100; i++) {
+        numbers.push(i);
+    }
+
+    outerloop:
+    while (a < numbers.length) {
+        let b = 2;
+        innerloop:
+        while (b <= numbers[a] / 2) {
+            if (numbers[a] % b == 0) {
+                a++;
+                continue outerloop;
+            }
+            b++;
+        }
+        primes.push(numbers[a]);
+        a++;
+
+    }
+
+    console.log(primes);
+
+</script>

@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function countBasketPrice(totalPrice) {
+        let sum = 0;
+        for (let i = totalPrice.length; i--;) {
+            sum += totalPrice[i];
+        }
+        return sum;
+    }
+
+    let cart = [];
+    let numberOfItems = 5;
+
+    for (let i = 0; i < numberOfItems; i++) {
+        cart.push(Math.floor(Math.random() * 90 + 10));
+    }
+
+    console.log(cart);
+
+    console.log("Общая стоимость - " + countBasketPrice(cart));
+
+</script>
