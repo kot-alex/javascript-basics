@@ -1,0 +1,64 @@
+<meta charset="UTF-8">
+
+<script>
+    "use strict"
+
+    function onesTensHundreds(userNumber) {
+        let numberOfOth = {};
+        if (isNaN(userNumber) || userNumber == "") {
+            return "Введите число";
+        } else if (userNumber > 999) {
+            console.log("Слишком большое число");
+            return numberOfOth;
+        } else {
+            let ones = Math.floor(userNumber % 10);
+            let tens = Math.floor((userNumber / 10) % 10);
+            let hundreds = Math.floor((userNumber / 100) % 10);
+            numberOfOth.ones = ones;
+            numberOfOth.tens = tens;
+            numberOfOth.hundreds = hundreds;
+            return numberOfOth;
+        }
+    }
+
+    let userNumber = prompt("Укажите число от 0 до 999");
+
+    console.log(onesTensHundreds(userNumber));
+
+</script>
+
+
+<script>
+    "use strict"
+
+    function addZero(number) {
+        let zeroNum = "" + number;
+        while (zeroNum.length < 3) {
+            zeroNum = "0" + zeroNum;
+        }
+        return zeroNum;
+    }
+
+    function onesTensHundreds(userNumber) {
+        let numberOfOth = {};
+        let arrOfNumbers = [];
+        if (isNaN(userNumber) || userNumber == "") {
+            return "Введите число";
+        } else if (userNumber > 999) {
+            console.log("Слишком большое число");
+            return numberOfOth;
+        } else {
+            userNumber = addZero(Math.trunc(userNumber));
+            arrOfNumbers = Array.from(userNumber.toString());
+            numberOfOth.ones = arrOfNumbers[2];
+            numberOfOth.tens = arrOfNumbers[1];
+            numberOfOth.hundreds = arrOfNumbers[0];
+            return numberOfOth;
+        }
+    }
+
+    let userNumber = prompt("Укажите число от 0 до 999");
+
+    console.log(onesTensHundreds(userNumber));
+
+</script>

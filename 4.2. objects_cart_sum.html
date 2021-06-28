@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+    "use strict"
+
+    function randomType(arrOfTypes) {
+        for (let i = 0; i < arrOfTypes.length; i++) {
+            let type = arrOfTypes[Math.floor(Math.random() * arrOfTypes.length)];
+            let index = arrOfTypes.indexOf(type)
+            arrOfTypes.splice(index, 1);
+            return type;
+        }
+    }
+
+    function getItem(type) {
+        let item = {};
+        let itemType = type;
+        let itemPrice = Math.floor(Math.random() * 200 + 10);
+        let itemQuantity = Math.floor(Math.random() * 5 + 1);
+        item.type = itemType;
+        item.price = itemPrice;
+        item.quantity = itemQuantity;
+        return item;
+    }
+
+    function countBasketPrice(arrOfItems) {
+        let sum = 0;
+        for (let i = 0; i < arrOfItems.length; i++) {
+            sum += arrOfItems[i]['price'] * arrOfItems[i]['quantity'];
+        }
+        return sum;
+    }
+
+    let cart = [];
+    let types = ["Trousers", "T-shirt", "Sweater", "Jeans", "Shoes", "Shorts", "Hoodie", "Coat", "Suit", "Jacket"];
+
+    for (let i = 0; i < 10; i++) {
+        cart.push(getItem(randomType(types)));
+    }
+
+    console.log(cart);
+    console.log("Общая стоимость - " + countBasketPrice(cart));
+
+</script>
