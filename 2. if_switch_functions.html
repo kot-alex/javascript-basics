@@ -1,0 +1,158 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let a = parseInt(prompt("Введите первое целое число"));
+    let b = parseInt(prompt("Введите второе целое число"));
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Введите два числа");
+    } else if (a >= 0 && b >= 0) {
+        let diff = a - b;
+        alert("Разность чисел равна " + diff);
+    } else if (a < 0 && b < 0) {
+        let product = a * b;
+        alert("Произведение чисел равно " + product);
+    } else {
+        let sum = a + b;
+        alert("Сумма чисел равна " + sum);
+    }
+
+</script>
+
+<script>
+
+    let c = parseInt(prompt("Введите число от 0 до 15"));
+
+    switch (isNaN(c) || c) {
+        case true:
+            alert("Введите число");
+            break;
+        case 0:
+            alert(c);
+            c++;
+        case 1:
+            alert(c);
+            c++;
+        case 2:
+            alert(c);
+            c++;
+        case 3:
+            alert(c);
+            c++;
+        case 4:
+            alert(c);
+            c++;
+        case 5:
+            alert(c);
+            c++;
+        case 6:
+            alert(c);
+            c++;
+        case 7:
+            alert(c);
+            c++;
+        case 8:
+            alert(c);
+            c++;
+        case 9:
+            alert(c);
+            c++;
+        case 10:
+            alert(c);
+            c++;
+        case 11:
+            alert(c);
+            c++;
+        case 12:
+            alert(c);
+            c++;
+        case 13:
+            alert(c);
+            c++;
+        case 14:
+            alert(c);
+            c++;
+        case 15:
+            alert(c);
+            break;
+        default:
+            alert("Введите число в указанном диапазоне");
+            break;
+    }
+
+</script>
+
+<script>
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    function sub(a, b) {
+        return a - b;
+    }
+
+    function mul(a, b) {
+        return a * b;
+    }
+
+    function div(a, b) {
+        return a / b;
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+":
+                alert(add(arg1, arg2));
+                break;
+            case "-":
+                alert(sub(arg1, arg2));
+                break;
+            case "*":
+                alert(mul(arg1, arg2));
+                break;
+            case "/":
+                alert(div(arg1, arg2));
+                break;
+            default:
+                alert("Укажите одно из арифметических действий");
+                break;
+        }
+
+    }
+
+    let arg1 = +prompt("Введите первое число");
+    let arg2 = +prompt("Введите второе число");
+    let operation = prompt("Укажите арифметическое действие \" +, -, *, / \"");
+
+    if (isNaN(arg1) || isNaN(arg2)) {
+        alert("Введите два числа");
+    } else {
+        mathOperation(arg1, arg2, operation);
+    }
+
+</script>
+
+<script>
+
+    function power(val, pow) {
+        if (pow == 0) {
+            return 1;
+        } else if (pow == 1) {
+            return val;
+        } else {
+            return val * power(val, pow - 1);
+        }
+    }
+
+    let val = prompt("Введите число");
+    let pow = prompt("Введите степень числа");
+
+    if (isNaN(val) || val == "" || isNaN(pow) || pow == "") {
+        alert("Введите число и степень");
+    } else {
+        alert(power(val, pow));
+    }
+
+</script>
