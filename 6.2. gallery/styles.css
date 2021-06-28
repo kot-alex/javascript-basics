@@ -1,0 +1,39 @@
+.row {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.gallery-image {
+    width: 60px;
+    padding: 10px;
+}
+
+#popup {
+    background-color: darkgray;
+    border-radius: 5px;
+    width: 600px;
+    height: 500px;
+    top: 10%;
+    position: absolute;
+    left: calc(50% - 300px);
+    display: none;
+}
+
+#closePopup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image {
+    display: none;
+    margin-top: 40px;
+}

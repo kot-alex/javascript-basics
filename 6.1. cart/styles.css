@@ -1,0 +1,24 @@
+#cart {
+    padding: 10px;
+    background-color: rgb(216, 212, 212);
+    text-align: end;
+}
+
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.image {
+    margin-bottom: 10px;
+}
